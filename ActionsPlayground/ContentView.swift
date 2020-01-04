@@ -10,7 +10,10 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        VStack {
+            Text(Localizable.home.localize)
+            Text(Localizable.change("A", "B").localize)
+        }
     }
 }
 

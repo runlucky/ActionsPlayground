@@ -18,11 +18,16 @@ internal enum Localizable {
     case Information
     /// 一般 / General 
     case General
-    /// ローカライズ済みの文言を指定してください。 
+    /// エラー
+    case error(Error)
+    /// 非推奨：ローカライズ可能な文言
+    case any(String)
+    /// ローカライズ済み、またはローカライズ不要の文言
     case localized(String)
 
     internal var localize: String {
         switch self {
+        case .Key: return "Key".localize
         case .home: return "home".localize
         case .Dash_board: return "Dash board".localize
         case .Today(let x1): return "Today".localize(arguments: [x1])
@@ -30,6 +35,8 @@ internal enum Localizable {
         case .Progress(let x1, let x2): return "Progress".localize(arguments: [x1, x2])
         case .Information: return "Information".localize
         case .General: return "General".localize
+        case .error(let x1): return x1.localizedDescription
+        case .any(let x1): return x1.localize
         case .localized(let x1): return x1
         }
     }
