@@ -107,6 +107,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1948B5B923C0632300BE1E8F /* Build configuration list for PBXNativeTarget "ActionsPlayground" */;
 			buildPhases = (
+				197C7E8323C0AC1400343DCE /* Localize */,
 				1948B59E23C0631E00BE1E8F /* Sources */,
 				1948B59F23C0631E00BE1E8F /* Frameworks */,
 				1948B5A023C0631E00BE1E8F /* Resources */,
@@ -167,6 +168,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		197C7E8323C0AC1400343DCE /* Localize */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Localize;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\necho \"★Localize実行\"\n\"${SRCROOT}/ActionsPlayground/Localizable/Localizer\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1948B59E23C0631E00BE1E8F /* Sources */ = {
