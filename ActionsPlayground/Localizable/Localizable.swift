@@ -27,7 +27,6 @@ internal enum Localizable {
 
     internal var localize: String {
         switch self {
-        case .Key: return "Key".localize
         case .home: return "home".localize
         case .Dash_board: return "Dash board".localize
         case .Today(let x1): return "Today".localize(arguments: [x1])
