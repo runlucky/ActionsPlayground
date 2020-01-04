@@ -1,0 +1,12 @@
+// ### 注意 ###
+// このファイルは直接編集しないでください。
+// 文言を追加・修正したい場合はLocalizable.csvを編集してから
+// Localizer.appを実行してください。
+
+"home" = "Home";
+"Dash board" = "Dashboard";
+"Today" = "Today(%@)";
+"change" = "Change from %@ to %@. Will you?";
+"Progress" = "Processing... (%d/%d)";
+"Information" = "Information";
+"General" = "General";

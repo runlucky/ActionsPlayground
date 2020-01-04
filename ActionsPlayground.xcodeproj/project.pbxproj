@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		192F7CEA23C06BC700864CD9 /* Localizable in Resources */ = {isa = PBXBuildFile; fileRef = 192F7CE923C06BC700864CD9 /* Localizable */; };
 		1948B5A623C0631E00BE1E8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1948B5A523C0631E00BE1E8F /* AppDelegate.swift */; };
 		1948B5A823C0631E00BE1E8F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1948B5A723C0631E00BE1E8F /* SceneDelegate.swift */; };
 		1948B5AB23C0631E00BE1E8F /* ActionsPlayground.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1948B5A923C0631E00BE1E8F /* ActionsPlayground.xcdatamodeld */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		192F7CE923C06BC700864CD9 /* Localizable */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Localizable; sourceTree = "<group>"; };
 		1948B5A223C0631E00BE1E8F /* ActionsPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActionsPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1948B5A523C0631E00BE1E8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1948B5A723C0631E00BE1E8F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 		1948B5A423C0631E00BE1E8F /* ActionsPlayground */ = {
 			isa = PBXGroup;
 			children = (
+				192F7CE923C06BC700864CD9 /* Localizable */,
 				1948B5A523C0631E00BE1E8F /* AppDelegate.swift */,
 				1948B5A723C0631E00BE1E8F /* SceneDelegate.swift */,
 				1948B5AC23C0631E00BE1E8F /* ContentView.swift */,
@@ -137,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1948B5B523C0632300BE1E8F /* LaunchScreen.storyboard in Resources */,
+				192F7CEA23C06BC700864CD9 /* Localizable in Resources */,
 				1948B5B223C0632300BE1E8F /* Preview Assets.xcassets in Resources */,
 				1948B5AF23C0632300BE1E8F /* Assets.xcassets in Resources */,
 			);
