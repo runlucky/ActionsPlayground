@@ -10,7 +10,7 @@ jobs:
     name: Run Localizer
     runs-on: macos-latest
     env:
-      MYVAL: ''
+      OUTPUT: ''
 
     steps:
       - name: Checkout
@@ -19,13 +19,13 @@ jobs:
       - name: Localize
         run: |
           echo "処理開始"
-          MYVAL=`ActionsPlayground/Localizable/Localizer`
+          OUTPUT=`ActionsPlayground/Localizable/Localizer`
           result=$?
           if [ $result -eq 0] ; then
-            echo "ok"
+            echo "OK"
           else
-            echo "ng"
-            echo $MYVAL
+            echo "NG"
+            echo $OUTPUT
             exit 1
           fi
           echo "終了"
@@ -35,7 +35,7 @@ jobs:
         if: failure()
         with:
           type: ${{ job.status }}  # jobの成否を代入(Failure/Success)
-          job_name: ${{ MYVAL }}
+          job_name: "${OUTPUT}"
           username: 'Localizer'
           channel: '#random'
         env:
