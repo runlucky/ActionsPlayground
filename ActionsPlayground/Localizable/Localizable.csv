@@ -2,7 +2,7 @@ Key,Japanese,English
 home,ホーム,Home
 Dash board,ダッシュボード,Dashboard
 Today,現在(%@),Today(%@)
-change,%@からに変更します。\nよろしいですか？,Change from %@ to %@. Will you??
+change,%@からに変更します。\nよろしいですか？,Change from %@ to %@. Will you???
 Progress,処理中... (%d/%d),Processing... (%d/%d)
 Information,インフォメーション,Information
 General,一般,General
