@@ -3,6 +3,7 @@
 // 文言を追加・修正したい場合はLocalizable.csvを編集してから
 // Localizer.appを実行してください。
 
+
 internal enum Localizable {
     /// ホーム / Home 
     case home
