@@ -34,8 +34,8 @@ jobs:
         uses: homoluctus/slatify@master
         if: failure()
         with:
-          type: ${{ job.status }}  # jobの成否を代入(Failure/Success)
-          job_name: ${{ env.OUTPUT }}
+          type: ${{ job.status }}
+          job_name: abc${{ env.OUTPUT }}edf
           username: 'Localizer'
           channel: '#random'
         env:
