@@ -11,9 +11,9 @@ jobs:
       - name: Slack notification
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-#          SLACK_USERNAME: ThisIsMyUsername # Optional.
-#          SLACK_CHANNEL: general # Optional.
-#          SLACK_OVERRIDE_MESSAGE: 'Custom message' # Optional.
+          SLACK_USERNAME: ThisIsMyUsername # Optional.
+          SLACK_CHANNEL: general # Optional.
+          SLACK_OVERRIDE_MESSAGE: 'Custom message' # Optional.
         uses: Ilshidur/action-slack@master
         with:
           args: 'A new commit has been pushed.'
