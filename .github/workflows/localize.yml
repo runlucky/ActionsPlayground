@@ -35,9 +35,8 @@ jobs:
         if: failure()
         with:
           type: ${{ job.status }}  # jobの成否を代入(Failure/Success)
-          job_name: "${hogehoge}"
+          job_name: ${{ env.OUTPUT }}
           username: 'Localizer'
           channel: '#random'
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-          hogehoge: $OUTPUT
