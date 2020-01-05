@@ -16,11 +16,13 @@ jobs:
 
       - name: Localize
         run: |
-          echo "aaa"
+          echo "処理開始"
           result=`ActionsPlayground/Localizable/Localizer 2>/dev/null || true`
           if test $result = "★正常終了" ; then
+            echo "ok"
             echo $result
           else
+            echo "ng"
             echo $result 1>&2
           fi
-          echo "aaa2"
+          echo "終了"
