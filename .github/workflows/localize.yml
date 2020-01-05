@@ -35,7 +35,7 @@ jobs:
         if: failure()
         with:
           type: ${{ job.status }}  # jobの成否を代入(Failure/Success)
-          job_name: '$MYVAL'
+          job_name: ${{ MYVAL }}
           username: 'Localizer'
           channel: '#random'
         env:
