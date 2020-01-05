@@ -1,0 +1,18 @@
+name: CheckLocalize
+
+on:
+  push:
+    paths:
+      - 'ActionsPlayground/Localize/**'
+
+jobs:
+  build:
+    name: Run Localizer
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - name: Localize
+        run: ActionsPlayground/Localizable/Localizer
