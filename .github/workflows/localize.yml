@@ -10,7 +10,7 @@ jobs:
     name: Run Localizer
     runs-on: macos-latest
     env:
-      MYVAL: ''
+      MYVAL: aaa
 
     steps:
       - name: Checkout
