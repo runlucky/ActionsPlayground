@@ -19,7 +19,7 @@ jobs:
       - name: Localize
         run: |
           echo "処理開始"
-          MYVAL=ActionsPlayground/Localizable/Localizer
+          MYVAL='ActionsPlayground/Localizable/Localizer'
           result=$?
           if [ $result -eq 0] ; then
             echo "ok"
