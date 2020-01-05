@@ -10,7 +10,7 @@ jobs:
     name: Run Localizer
     runs-on: macos-latest
     env:
-      MYVAL: aaa
+      MYVAL: ''
 
     steps:
       - name: Checkout
@@ -25,6 +25,7 @@ jobs:
             echo "ok"
           else
             echo "ng"
+            exit 1
           fi
           echo "終了"
 
