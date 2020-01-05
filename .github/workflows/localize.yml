@@ -3,7 +3,7 @@ name: CheckLocalize
 on:
   push:
     paths:
-      - 'ActionsPlayground/Localize/**'
+      - 'ActionsPlayground/Localizable/**'
 
 jobs:
   build:
