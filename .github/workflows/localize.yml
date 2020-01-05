@@ -16,7 +16,7 @@ jobs:
 
       - name: Localize
         run: |
-          result=`ActionsPlayground/Localizable/Localizer || true`
+          result=`ActionsPlayground/Localizable/Localizer 2>/dev/null || true`
           if test $result = "★正常終了" ; then
             echo $result
           else
