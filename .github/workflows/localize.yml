@@ -25,6 +25,7 @@ jobs:
             echo "ok"
           else
             echo "ng"
+            echo $MYVAL
             exit 1
           fi
           echo "終了"
@@ -34,7 +35,7 @@ jobs:
         if: failure()
         with:
           type: ${{ job.status }}  # jobの成否を代入(Failure/Success)
-          job_name: ${{MYVAL}}
+          job_name: '${MYVAL}'
           username: 'Localizer'
           channel: '#random'
         env:
