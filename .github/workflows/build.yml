@@ -1,4 +1,4 @@
-name: Localize
+name: Build
 
 on: [push]
 
