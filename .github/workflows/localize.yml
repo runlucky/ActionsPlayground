@@ -16,3 +16,27 @@ jobs:
 
       - name: Localize
         run: ActionsPlayground/Localizable/Localizer
+name: CheckLocalize
+
+on:
+  push:
+    paths:
+      - 'ActionsPlayground/Localizable/**'
+
+jobs:
+  build:
+    name: Run Localizer
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - name: Localize
+        run: |
+          result=`ActionsPlayground/Localizable/Localizer`
+          if test $result = "★正常終了" ; then
+            echo $result
+          else
+            echo $result 1>&2
+          fi
