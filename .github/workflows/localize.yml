@@ -26,13 +26,12 @@ jobs:
           fi
           echo "終了"
 
-      - name: Slack notification
-        if: failure()
+      - name: Slack Notification
+        uses: homoluctus/slatify@master
+        if: always()  # jobの成否に関わらずSlackへ通知
+        with:
+          type: ${{ job.status }}  # jobの成否を代入(Failure/Success)
+          job_name: '*Lint Check*'
+          channel: '#random'
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-          SLACK_USERNAME: ThisIsMyUsername # Optional.
-          #SLACK_CHANNEL: general # Optional.
-          #SLACK_OVERRIDE_MESSAGE: 'Custom message' # Optional.
-        uses: Ilshidur/action-slack@master
-        with:
-          args: 'A new commit has been pushed.'
