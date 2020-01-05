@@ -11,10 +11,16 @@ jobs:
 #          destination: ['platform=iOS Simulator,OS=13.1,name=iPhone 11']
 
     steps:
-      - uses: actions/checkout@master
+        - uses: actions/checkout@master
+        
+        - name: ls
+          run: ls
+          
+        - name: pwd
+          run: pwd
       
-      - name: Build
-        run: xcodebuild
+        - name: Build
+          run: xcodebuild
 #        run: |
 #          xcodebuild clean test -workspace Nanisuko.xcworkspace -scheme Nanisuko -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
 #          bash <(curl -s https://codecov.io/bash)
