@@ -19,13 +19,13 @@ jobs:
       - name: Localize
         run: |
           echo "処理開始"
-          OUTPUT=`ActionsPlayground/Localizable/Localizer`
+          env.OUTPUT=`ActionsPlayground/Localizable/Localizer`
           result=$?
           if [ $result -eq 0] ; then
             echo "OK"
           else
             echo "NG"
-            echo $OUTPUT
+            echo ${{ env.OUTPUT }}
             exit 1
           fi
           echo "終了"
