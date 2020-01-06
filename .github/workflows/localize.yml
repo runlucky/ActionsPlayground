@@ -1,0 +1,41 @@
+name: CheckLocalize
+
+on: push
+#  push:
+#    paths:
+#      - 'ActionsPlayground/Localizable/**'
+
+jobs:
+  build:
+    name: Run Localizer
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.sha }}
+
+      - name: Localize
+        run: |
+          echo "処理開始"
+          ActionsPlayground/Localizable/Localizer
+          result=$?
+          if [ $result -eq 0 ]; then
+            echo "OK"
+          else
+            echo "NG"
+          fi
+          echo "終了"
+
+      - name: Slack Notification
+        uses: homoluctus/slatify@master
+        if: failure()
+        with:
+          type: ${{ job.status }}
+          job_name: "ローカライズ内容に不備があります。 https://github.com/${{ github.repository }}/commit/${{ github.sha }}/checks"
+          username: 'Localizer'
+          channel: '#random'
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+
