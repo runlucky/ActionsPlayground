@@ -3,23 +3,20 @@
 // 文言を追加・修正したい場合はLocalizable.csvを編集してから
 // Localizer.appを実行してください。
 
-
-
-
 internal enum Localizable {
-    /// ホーム / Home
+    /// ホーム / Home 
     case home
-    /// ダッシュボード / Dashboard
+    /// ダッシュボード / Dashboard 
     case Dash_board
-    /// 現在(%@) / Today(%@)
+    /// 現在(%@) / Today(%@) 
     case Today(String)
-    /// %@から%@に変更します。\nよろしいですか？ / Change from %@ to %@. Will you?
+    /// %@から%@に変更します。\nよろしいですか？ / Change from %@ to %@. Will you? 
     case change(String, String)
-    /// 処理中... (%d/%d) / Processing... (%d/%d)
+    /// 処理中... (%d/%d) / Processing... (%d/%d) 
     case Progress(Int, Int)
-    /// インフォメーション / Information
+    /// インフォメーション / Information 
     case Information
-    /// 一般 / General
+    /// 一般 / General 
     case General
     /// エラー
     case error(Error)
