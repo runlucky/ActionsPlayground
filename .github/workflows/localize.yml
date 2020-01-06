@@ -1,17 +1,14 @@
 name: CheckLocalize
 
 on:
-  push
-#  push:
-#    paths:
-#      - 'ActionsPlayground/Localizable/**'
+  push:
+    paths:
+      - 'ActionsPlayground/Localizable/**'
 
 jobs:
   build:
     name: Run Localizer
     runs-on: macos-latest
-    env:
-      OUTPUT: ''
 
     steps:
       - name: Checkout
@@ -22,13 +19,12 @@ jobs:
       - name: Localize
         run: |
           echo "処理開始"
-          env.OUTPUT=`ActionsPlayground/Localizable/Localizer`
+          ActionsPlayground/Localizable/Localizer
           result=$?
           if [ $result -eq 0] ; then
             echo "OK"
           else
             echo "NG"
-            echo ${{ env.OUTPUT }}
             exit 1
           fi
           echo "終了"
