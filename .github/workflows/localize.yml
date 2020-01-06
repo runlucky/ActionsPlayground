@@ -17,7 +17,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          ref: GITHUB_SHA
+          ref: $GITHUB_SHA
 
       - name: Localize
         run: |
