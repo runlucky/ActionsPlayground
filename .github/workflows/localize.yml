@@ -1,9 +1,11 @@
 name: CheckLocalize
 
-on: push
-#  push:
-#    paths:
-#      - 'ActionsPlayground/Localizable/**'
+on:
+  push:
+    paths:
+      - 'ActionsPlayground/Localizable/**'
+    branches:
+      - master
 
 jobs:
   build:
@@ -35,7 +37,7 @@ jobs:
         if: failure()
         with:
           type: ${{ job.status }}
-          job_name: abc${{ env.OUTPUT }}edf
+          job_name: "ローカライズ内容に不備があります。"
           username: 'Localizer'
           channel: '#random'
         env:
